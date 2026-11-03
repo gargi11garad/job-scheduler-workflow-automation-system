@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/jobs}
+    username: ${SPRING_DATASOURCE_USERNAME:jobs}
+    password: ${SPRING_DATASOURCE_PASSWORD:jobs}
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+scheduler:
+  poll-ms: ${SCHEDULER_POLL_MS:3000}
